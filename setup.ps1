@@ -1,4 +1,6 @@
-if (!Test-Path -PathType Container $neovimPath) {
-    New-Item -Path $env:localappdata -Name "nvim" -ItemType "directory"
+$neovimFolder = "$env:localappdata\nvim"
+
+if (!Test-Path -PathType Container $neovimFolder) {
+    New-Item $neovimFolder -ItemType "directory"
 }
-Copy-Item -Recurse -Force nvim "$env:localappdata\nvim"
+Copy-Item -Recurse -Force nvim $neovimFolder
