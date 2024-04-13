@@ -26,14 +26,15 @@ return {
 			local lspconfig = require("lspconfig")
 
 			lspconfig.lua_ls.setup({})
-			lspconfig.rust_analyzer.setup({
-				cmd = {
-					"rustup",
-					"run",
-					"stable",
-					"rust-analyzer",
-				},
-			})
+			-- Deprecated, this leads to conflict with rustaceanvim.
+			-- lspconfig.rust_analyzer.setup({
+			-- 	cmd = {
+			-- 		"rustup",
+			-- 		"run",
+			-- 		"stable",
+			-- 		"rust-analyzer",
+			-- 	},
+			-- })
 			lspconfig.taplo.setup({})
 			lspconfig.pyright.setup({})
 

@@ -3,6 +3,7 @@
         "trailing-space"
     ],
     "diagnostics.globals": [
-        "vim"
+        "vim",
+        "dap"
     ]
 }
